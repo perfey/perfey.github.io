@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Box-sizing</title>
+	<meta name="keyword" content="">
+	<meta name="description" content="">
+	<style type="text/css">
+	body {
+		margin: 0;
+	}
+	.d-1, .d-2, .ex {
+		margin-left: 100px;
+		margin-top: 30px; 
+	}
+	.box-1 {
+		width: 60px;
+		height: 60px;
+		padding: 10px;
+		border: 4px solid #999999;
+		background-color: #6FA2FB;
+		margin: 15px;
+		-moz-box-sizing: content-box;  /*Firefox3.5+*/
+		-webkit-box-sizing: content-box; /*Safari3.2+*/
+		-o-box-sizing: content-box; /*Opera9.6*/
+		-ms-box-sizing: content-box; /*IE8*/
+		box-sizing: content-box; /*W3C标准(IE9+，Safari5.1+,Chrome10.0+,Opera10.6+都符合box-sizing的w3c标准语法)*/
+	}
+	.box-2 {
+		width: 60px;
+		height: 60px;
+		padding: 10px;
+		border: 4px solid #999999;
+		background-color: #6FA2FB;
+		margin: 15px;
+		-moz-box-sizing: border-box;  /*Firefox3.5+*/
+		-webkit-box-sizing: border-box; /*Safari3.2+*/
+		-o-box-sizing: border-box; /*Opera9.6*/
+		-ms-box-sizing: border-box; /*IE8*/
+		box-sizing: border-box; /*W3C标准(IE9+，Safari5.1+,Chrome10.0+,Opera10.6+都符合box-sizing的w3c标准语法)*/
+	}
+	</style>
+</head>
+<body>
+	<div class="d-1">
+		<div class="box-1"></div>
+	</div>
+	<div class="d-2">
+		<div class="box-2"></div>
+	</div>
+	<div class="ex">
+		<p>content-box: width</p>
+		<p>border-box: width + padding + border</p>
+	</div>
+</body>
+</html>
