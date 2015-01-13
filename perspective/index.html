@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>perspective</title>
+<style type="text/css">
+body {
+	min-height: 800px;
+	padding-bottom: 30px;
+	font-size: 100%;
+	font-family: "Helvetica Neue",Arial,"Microsoft Yahei",Helvetica,sans-serif,Lato;
+	font-weight: normal;
+	line-height: 1;
+}
+p {
+	margin: 0;
+	padding: 5px;
+}
+.bg {
+	float: left;
+	margin: 50px;
+	height: 200px;
+	width: 200px;
+	border: 1px dashed #000000;
+}
+.bg div {
+	height: 200px;
+	width: 200px;
+	background-color: #5cb85c;
+}
+.r-x div {
+	-webkit-transform: perspective(400px) rotateX(30deg);	/* Safari 和 Chrome */
+	-moz-transform: perspective(400px) rotateX(30deg);	/* Firefox */
+	-ms-transform: perspective(400px) rotateX(30deg);	/* IE */
+	-o-transform: perspective(400px) rotateX(30deg);	/* opera */
+	transform: perspective(400px) rotateX(30deg);
+}
+.r-y div {
+	-webkit-transform: perspective(400px) rotateY(30deg);	/* Safari 和 Chrome */
+	-moz-transform: perspective(400px) rotateY(30deg);	/* Firefox */
+	-ms-transform: perspective(400px) rotateY(30deg);	/* IE */
+	-o-transform: perspective(400px) rotateY(30deg);	/* opera */
+	transform: perspective(400px) rotateY(30deg);
+}
+.r-z div {
+	-webkit-transform: perspective(400px) rotateZ(30deg);	/* Safari 和 Chrome */
+	-moz-transform: perspective(400px) rotateZ(30deg);	/* Firefox */
+	-ms-transform: perspective(400px) rotateZ(30deg);	/* IE */
+	-o-transform: perspective(400px) rotateZ(30deg);	/* opera */
+	transform: perspective(400px) rotateZ(30deg);
+}
+.r-y-o {
+	-webkit-perspective: 400px;	/* Safari 和 Chrome */
+	-moz-perspective: 400px;	/* Firefox */
+	-ms-perspective: 400px;	/* IE */
+	-o-perspective: 400px;	/* opera */
+	perspective: 400px;
+	-webkit-perspective-origin: 150px 150px;
+	-moz-perspective-origin: 150px 150px;
+	-ms-perspective-origin: 150px 150px;
+	perspective-origin: 150px 150px;
+}
+.r-y-o div {
+	-webkit-transform: rotateY(30deg);	/* Safari 和 Chrome */
+	-moz-transform: rotateY(30deg);	/* Firefox */
+	-ms-transform: rotateY(30deg);	/* IE */
+	-o-transform: rotateY(30deg);	/* opera */
+	transform: rotateY(30deg);
+}
+</style>
+</head>
+<body>
+<div class="bg r-x">
+	<div>
+		<p>x旋转</p>
+		<p>x轴旋转30度</p>
+		<p>在div的正中心</p>
+		<p>400px高的点查看</p>
+	</div>
+</div>
+<div class="bg r-y">
+	<div>
+		<p>y旋转</p>
+		<p>y轴旋转30度</p>
+		<p>在div的正中心</p>
+		<p>400px高的点查看</p>
+	</div>
+</div>
+<div class="bg r-y-o">
+	<div>
+		<p>y旋转 视角调整</p>
+		<p>y轴旋转30度</p>
+		<p>在距离div的左上角</p>
+		<p>150px 150px的地方</p>
+		<p>400px高的点查看</p>
+	</div>
+</div>
+<div class="bg r-z">
+	<div>
+		<p>z旋转</p>
+		<p>z轴旋转30度</p>
+		<p>在div的正中心</p>
+		<p>400px高的点查看</p>
+	</div>
+</div>
+</body>
+</html>
