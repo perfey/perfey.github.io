@@ -12,9 +12,23 @@ body {
 	font-weight: normal;
 	line-height: 1;
 }
+.clearfix {
+	zoom:1;
+}
+.clearfix:after {
+	content: '\200B';
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
 p {
 	margin: 0;
 	padding: 5px;
+}
+.ct {
+	margin: 40px;
 }
 .bg {
 	float: left;
@@ -62,45 +76,73 @@ p {
 }
 .r-y-o div {
 	-webkit-transform: rotateY(30deg);	/* Safari 和 Chrome */
-	-moz-transform: rotateY(30deg);	/* Firefox */
+	-moz-transform: rotateY(30deg);	/* Firefox */.
 	-ms-transform: rotateY(30deg);	/* IE */
 	-o-transform: rotateY(30deg);	/* opera */
 	transform: rotateY(30deg);
 }
+
+.axes {
+	width: 368px;
+	float: left;
+}
+.axes img {
+	width: 100%;
+	display: block;
+}
+.a-e {
+	float: left;
+	padding-top: 140px;
+	padding-left: 30px;
+}
+.a-e p {
+	max-width: 460px;
+	line-height: 1.4;
+}
 </style>
 </head>
 <body>
-<div class="bg r-x">
-	<div>
-		<p>x旋转</p>
-		<p>x轴旋转30度</p>
-		<p>在div的正中心</p>
-		<p>400px高的点查看</p>
+<div class="ct clearfix">
+	<div class="bg r-x">
+		<div>
+			<p>x旋转</p>
+			<p>x轴旋转30度</p>
+			<p>在div的正中心</p>
+			<p>400px高的点查看</p>
+		</div>
+	</div>
+	<div class="bg r-y">
+		<div>
+			<p>y旋转</p>
+			<p>y轴旋转30度</p>
+			<p>在div的正中心</p>
+			<p>400px高的点查看</p>
+		</div>
+	</div>
+	<div class="bg r-y-o">
+		<div>
+			<p>y旋转 视角调整</p>
+			<p>y轴旋转30度</p>
+			<p>在距离div的左上角</p>
+			<p>150px 150px的地方</p>
+			<p>400px高的点查看</p>
+		</div>
+	</div>
+	<div class="bg r-z">
+		<div>
+			<p>z旋转</p>
+			<p>z轴旋转30度</p>
+			<p>在div的正中心</p>
+			<p>400px高的点查看</p>
+		</div>
 	</div>
 </div>
-<div class="bg r-y">
-	<div>
-		<p>y旋转</p>
-		<p>y轴旋转30度</p>
-		<p>在div的正中心</p>
-		<p>400px高的点查看</p>
-	</div>
-</div>
-<div class="bg r-y-o">
-	<div>
-		<p>y旋转 视角调整</p>
-		<p>y轴旋转30度</p>
-		<p>在距离div的左上角</p>
-		<p>150px 150px的地方</p>
-		<p>400px高的点查看</p>
-	</div>
-</div>
-<div class="bg r-z">
-	<div>
-		<p>z旋转</p>
-		<p>z轴旋转30度</p>
-		<p>在div的正中心</p>
-		<p>400px高的点查看</p>
+<div class="ct clearfix">
+	<div class="axes"><img src="img/3d_axes.png" alt="css立体坐标系"></div>
+	<div class="a-e">
+		<p>旋转会按照左图坐标系</p>
+		<p>旋转空间情况：从正方向负方向看过去，按照顺时针旋转</p>
+		<p>或者理解为左手法则，左手大拇指从负方向指向正方向，握拳，手指旋转的方向即为css正值旋转的方向</p>
 	</div>
 </div>
 </body>
