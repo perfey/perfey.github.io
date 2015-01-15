@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>1px边框hover后变2px 文字无位移</title>
+	<meta name="keyword" content="边框,hover,变色,变粗" />
+	<meta name="description" content="1px边框hover后变2px,文字无位移" />
+	<style type="text/css">
+	body {
+		min-height: 800px;
+		padding-bottom: 30px;
+		font-size: 100%;
+		font-family: "Helvetica Neue",Arial,"Microsoft Yahei",Helvetica,sans-serif,Lato;
+		font-weight: normal;
+		line-height: 1;
+	}
+	.center {
+		width: 80%;
+		text-align: center;
+		min-width: 600px;
+	}
+	.header {
+		margin: 60px auto 0;
+	}
+	.content {
+		margin: 20px auto 0;
+	}
+	.clearfix {
+		zoom:1;
+	}
+	.clearfix:after {
+		content: '\200B';
+		display: block;
+		clear: both;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+	.l-r {
+		margin-top: 60px;
+	}
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+	.mian {
+		height: 100px;
+		width: 101%;
+	}
+	.box {
+		width: 23.6%;
+		border: 1px solid #999999;
+		margin-right: 1%;
+	}
+	.box:hover {
+		border: 1px solid red;
+	}
+	.box div {
+		border: 1px solid transparent;
+		text-align: center;
+		height: 36px;
+		line-height: 36px;
+	}
+	.box:hover div {
+		border: 1px solid red;
+	}
+	</style>
+</head>
+<body>
+<div class="center header">
+	<h3>鼠标移上去1px边框hover后变2px 文字无位移 左右完全对齐</h3>
+	<h5>此方法无法保证右侧绝对对齐(参考<a href="index1.html">左右绝对对齐</a>)</h5>
+	<div class="clearfix l-r">
+		<span class="left">左侧</span>
+		<span class="right">右侧</span>
+	</div>
+</div>
+<div class="center content">
+	<div class="mian">
+		<div class="box left">
+			<div>111111</div>
+		</div>
+		<div class="box left">
+			<div>222222</div>
+		</div>
+		<div class="box left">
+			<div>333333</div>
+		</div>
+		<div class="box left">
+			<div>444444</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>1px边框hover后变2px 文字无位移</title>
+	<meta name="keyword" content="边框,hover,变色,变粗" />
+	<meta name="description" content="1px边框hover后变2px,文字无位移" />
+	<style type="text/css">
+	body {
+		min-height: 800px;
+		padding-bottom: 30px;
+		font-size: 100%;
+		font-family: "Helvetica Neue",Arial,"Microsoft Yahei",Helvetica,sans-serif,Lato;
+		font-weight: normal;
+		line-height: 1;
+	}
+	.center {
+		width: 80%;
+		text-align: center;
+		min-width: 600px;
+	}
+	.header {
+		margin: 60px auto 0;
+	}
+	.content {
+		margin: 20px auto 0;
+	}
+	.clearfix {
+		zoom:1;
+	}
+	.clearfix:after {
+		content: '\200B';
+		display: block;
+		clear: both;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+	.l-r {
+		margin-top: 60px;
+	}
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+	.mian {
+		height: 100px;
+		width: 101.01%;
+	}
+	.box {
+		width: 24%;
+		margin-right: 1%;
+	}
+	.box-border {
+		border: 1px solid #999999;
+	}
+	.box-border:hover {
+		border: 1px solid red;
+	}
+	.box-border div {
+		border: 1px solid transparent;
+		text-align: center;
+		height: 36px;
+		line-height: 36px;
+	}
+	.box-border:hover div {
+		border: 1px solid red;
+	}
+	p {
+		text-align: center;
+		font-size: 12px;
+		line-height: 1.4;
+		margin: 10px auto 0;
+	}
+	</style>
+</head>
+<body>
+<div class="center header">
+	<h3>鼠标移上去1px边框hover后变2px 文字无位移 左右完全对齐</h3>
+	<h5>右侧几乎绝对对齐，视觉无法分辨</h5>
+	<div class="clearfix l-r">
+		<span class="left">左侧</span>
+		<span class="right">右侧</span>
+	</div>
+</div>
+<div class="center content">
+	<div class="mian">
+		<div class="box left">
+			<div class="box-border">
+				<div>111111</div>
+			</div>
+		</div>
+		<div class="box left">
+			<div class="box-border">
+				<div>222222</div>
+			</div>
+		</div>
+		<div class="box left">
+			<div class="box-border">
+				<div>333333</div>
+			</div>
+		</div>
+		<div class="box left">
+			<div class="box-border">
+				<div>444444</div>
+			</div>
+		</div>
+	</div>
+</div>
+<p class="center">如果想右侧绝对对齐，可以再最后一个框增加class或者第一个增加class，这个框不设置右边距，或者左边距，能保证绝对的左右侧都是对齐。但是这样子会略微增加后端工程师套页面的成本。</p>
+<p class="center">还有一种使用绝对定位的方式，每一个box都用决定定位固定位置，也可以实现需求的效果，相比本例的优点是，html嵌套不会这么深，缺点是定位麻烦，维护麻烦，不方便后端工程师套页面。</p>
+</body>
+</html>
