@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片自适应满屏</title>
+<meta name="keyword" content="背景图自适应满屏" />
+<meta name="description" content="背景图自适应满屏，IE7、8也支持，高级浏览器依靠css3" />
+<style type="text/css">
+body {
+	margin: 0;
+}
+.main {
+	background-image: url(img/bg.jpg);
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 800px;
+}
+.ie8 .main {
+	position: fixed;
+	top: 0;
+	left: 0;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bg.jpg', sizingMethod='scale');
+}
+</style>
+</head>
+<body>
+<div class="main">
+</div>
+<!--[if lte IE 8]>
+<script type="text/javascript">
+	document.body.className = "ie8";
+</script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+/**
+ *	背景图尺寸是 1920 * 1080  长宽比是 16:9
+**/
+$(function(){
+	var isLessIe9 = false;
+	if ($("body").hasClass("ie8")) {
+		isLessIe9 = true;
+	}
+	$(window).on("load resize", function() {
+        var seeHeight = $(window).height();
+        if (isLessIe9) {
+        	var seeWidth = $(window).width(), bgHeight, bgWidth;
+        	if (seeWidth / seeHeight * 9 > 16) {	//比较宽的情况
+        		bgHeight = seeWidth / 16 * 9;
+        		bgWidth = seeWidth;
+        		$(".main").css({
+        			'height': bgHeight + 'px',
+	        		'width': bgWidth + 'px',
+	        		'top': (seeHeight - bgHeight) / 2 + 'px',
+	        		'left': '0px'
+	        	});
+        	} else {		//比较高的情况
+        		bgWidth = seeHeight / 9 * 16;
+        		bgHeight = seeHeight;
+        		$(".main").css({
+        			'height': bgHeight + 'px',
+	        		'width': bgWidth + 'px',
+	        		'left': (seeWidth - bgWidth) / 2 + 'px',
+	        		'top': '0px'
+	        	});
+        	}
+        } else {
+        	$(".main").height(seeHeight);
+    	}
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片自适应满屏</title>
+<meta name="keyword" content="背景图自适应满屏" />
+<meta name="description" content="背景图自适应满屏，IE7、8有瑕疵" />
+<style type="text/css">
+body {
+	margin: 0;
+}
+.main {
+	background-image: url(img/bg.jpg);
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 800px;
+}
+.ie8 .main {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/bg.jpg', sizingMethod='scale');
+}
+</style>
+</head>
+<body>
+<div class="main">
+</div>
+<!--[if lte IE 8]>
+<script type="text/javascript">
+	document.body.className = "ie8";
+</script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+	$(window).on("load resize", function() {
+        var seeHeight = $(window).height();
+        $(".main").height(seeHeight);
+    });
+</script>
+</body>
+</html>
