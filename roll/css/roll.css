@@ -1,0 +1,107 @@
+html {
+    font-family: "Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft Yahei",Helvetica,sans-serif,Lato;
+}
+body {
+	text-align: center;
+	margin: 0;
+	padding: 40px 0;
+	min-width: 600px;
+}
+dl, ol, ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+/**竖向列表**/
+.vertical {
+	margin: 0 auto;
+	width: 400px;
+}
+.vertical .v-title {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.vertical li {
+	height: 24px;
+	line-height: 24px;
+}
+.vertical span {
+	display: inline-block;
+	width: 120px;
+	font-size: 16px;
+}
+.v-list {
+	height: 120px;
+	overflow: hidden;
+}
+
+.s-table {
+	margin: 20px auto 40px;
+}
+
+/**横向列表**/
+.across {
+	margin: 0 auto;
+	width: 320px;
+}
+.clearfix {
+	zoom: 1;
+}
+.clearfix:after {
+	content: '\200B';
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.pre-btn {
+	float: left;
+	height: 66px;
+	line-height: 62px;
+	font-size: 40px;
+	cursor: pointer;
+}
+.next-btn {
+	float: left;
+	height: 66px;
+	line-height: 62px;
+	font-size: 40px;
+	cursor: pointer;
+}
+.carousel {
+	float: left;
+	height: 66px;
+    overflow: hidden;
+    position: relative;
+    width: 280px;
+    _width: 282px;
+}
+.n-list {
+	width: 700px;
+	_width: 702px;
+}
+.box {
+	float: left;
+	height: 64px;
+	line-height: 64px;
+	font-size: 20px;
+	width: 64px;
+	border: 1px solid #707070;
+	margin: 0 2px;
+}
+.n-table {
+	margin-bottom: 40px;
+}
+.n-title {
+	margin-bottom: 10px;
+}
+
+.t-list {
+	width: 980px;
+	_width: 982px;
+}
+.t-title {
+	margin-bottom: 10px;
+}

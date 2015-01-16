@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>滚动列表</title>
+<meta name="keyword" content="列表，自动滚动，手动滚动，纵向，横向">
+<meta name="description" content="横向、竖向，自动、手动滚动的列表，可用于展示中奖榜单等">
+<link rel="stylesheet" type="text/css" href="css/roll.css">
+</head>
+<body>
+<div class="u-table vertical">
+	<div class="u-title v-title">竖向列表-末尾数据硬性变为头部数据</div>
+	<div class="u-list v-list">
+		<ul>
+			<li><span>1XXXX9</span><span>中XXXX奖</span></li>
+			<li><span>2XXXX8</span><span>中XXXX奖</span></li>
+			<li><span>3XXXX7</span><span>中XXXX奖</span></li>
+			<li><span>4XXXX6</span><span>中XXXX奖</span></li>
+			<li><span>5XXXX5</span><span>中XXXX奖</span></li>
+			<li><span>6XXXX4</span><span>中XXXX奖</span></li>
+			<li><span>7XXXX3</span><span>中XXXX奖</span></li>
+			<li><span>8XXXX2</span><span>中XXXX奖</span></li>
+			<li><span>9XXXX1</span><span>中XXXX奖</span></li>
+			<li><span>0XXXX0</span><span>中XXXX奖</span></li>
+			<li><span>AXXXX0</span><span>中XXXX奖</span></li>
+			<li><span>BXXXX0</span><span>中XXXX奖</span></li>
+		</ul>
+	</div>
+</div>
+
+<div class="s-table vertical">
+	<div class="s-title v-title">竖向列表-过渡循环形式</div>
+	<div class="s-list v-list">
+		<ul>
+		</ul>
+	</div>
+</div>
+
+
+<div class="n-table across clearfix">
+	<div class="n-title v-title">横向列表-点击移动</div>
+	<div class="pre-btn">‹</div>
+	<div class="carousel">
+		<div class="n-list a-list">
+			<div class="box">0</div>
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+			<div class="box">5</div>
+			<div class="box">6</div>
+			<div class="box">7</div>
+			<div class="box">8</div>
+			<div class="box">9</div>
+		</div>
+	</div>
+	<div class="next-btn">›</div>
+</div>
+
+<div class="t-table across clearfix">
+	<div class="t-title v-title">竖向列表-过渡循环</div>
+	<div class="carousel">
+		<div class="t-list a-list">
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="js/roll.js"></script>
+</body>
+</html>
