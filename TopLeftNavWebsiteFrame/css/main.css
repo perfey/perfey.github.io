@@ -1,0 +1,56 @@
+body {
+    font-family: Helvetica,Arial,"WenQuanYi Micro Hei",sans-serif
+}
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,.lead {
+    font-family: Helvetica,Arial,"Microsoft YaHei","WenQuanYi Micro Hei",sans-serif
+}
+.content {
+    background-color: #ffffff;
+    text-align: center;
+    height: 1000px;
+    margin-left: 0px;
+    position: relative;
+}
+.top-nav .navbar-inner {
+    height: 64px;
+    line-height: 64px;
+}
+.top-nav .navbar-inner .container-fluid {
+    height: 64px;
+}
+.top-nav .nav-collapse > * {
+    height: 64px;
+    line-height: 64px;
+}
+.top-nav .nav li {
+    height: 64px;
+    line-height: 46px;
+}
+
+/**左导航**/
+.left-nav {
+    position: absolute;
+    left: 0;
+    top: 64px;
+    width: 300px;
+}
+.left-nav .nav-list li {
+    line-height: 46px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.086);    
+}
+.left-nav .nav-list li.nav-header {
+    line-height: 50px;
+    background-color: #F4F4F4;
+    color: #1C1C1C;
+    font-size: 1em;
+    font-weight: bold;
+}
+.left-nav .nav-list ul.nav-son {
+    display: none;
+}
+
+
+/**底部**/
+.footer {
+    text-align: center;
+}

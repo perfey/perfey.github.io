@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>主页</title>
+	<meta name="description" content="上导航，左导航，可隐藏" />
+	<meta name="keywords" content="网站主页框架，上导航，可隐藏的左导航" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="navbar navbar-static-top top-nav">
+	    <div class="navbar-inner">
+	        <div class="container-fluid">
+	            <div class="nav-collapse collapse">
+	                <p class="navbar-text pull-right">
+	                    <a class="navbar-link" href="#">
+	                        注册
+	                    </a>
+	                </p>
+	                <form class="navbar-form pull-right">
+		            	<input type="text" placeholder="Email" class="span2">
+		            	<input type="password" placeholder="Password" class="span2">
+		            	<button class="btn" type="submit">登录</button>
+		            </form>
+	                <ul class="nav">
+	                    <li>
+	                        <a href="#" class="show-left-nav">
+	                            点击
+	                        </a>
+	                    </li>
+	                    <li class="divider-vertical"></li>
+	                    <li>
+	                        <a href="#about">
+	                            About
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="#contact">
+	                            Contact
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="left-nav">
+		<div class="sidebar-nav">
+			<ul class="nav nav-list">
+				<li class="nav-header"><a href="#">首页</a></li>
+				<li><a href="#">登录</a></li>
+				<li><a href="#">立即加入</a></li>
+				<li><a href="#">语言</a></li>
+				<li><a href="#">帮助</a></li>
+				<li class="nav-header nav-home">
+					<a href="#">查找XXX</a>
+					<ul class="nav-son nav nav-list">
+						<li><a href="#">查找XX</a></li>
+						<li><a href="#">XX浏览</a></li>
+					</ul>
+				</li>
+				<li class="nav-header nav-home">
+					<a href="#">XX活动</a>
+					<ul class="nav-son nav nav-list">
+						<li><a href="#">XXX会议</a></li>
+						<li><a href="#">XXX会议</a></li>
+						<li><a href="#">XXXX</a></li>
+						<li><a href="#">XX活动</a></li>
+					</ul>
+				</li>
+				<li class="nav-header nav-home">
+					<a href="#">简介</a>
+					<ul class="nav-son nav nav-list">
+						<li><a href="#">企业概览</a></li>
+						<li><a href="#">我们的品牌</a></li>
+						<li><a href="#">工作机会</a></li>
+					</ul>
+				</li>
+				<li><a href="#">网站地图</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">正文~~~~~</div>
+	<footer>
+    	<div class="footer">
+    		&copy; Company 2013
+    	</div>
+    </footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/base.js"></script>
+</body>
+</html>
