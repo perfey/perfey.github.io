@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>btn:hover</title>
+<style type="text/css">
+	body, h1, h2, h3, h4, h5 {
+	    color: #000;
+	    font-family: "Helvetica Neue",Arial,"Microsoft Yahei",Helvetica,sans-serif,Lato;
+	    font-weight: 500;
+	    letter-spacing: 0.02em;
+	    text-rendering: optimizelegibility;
+	}
+	a {
+	    text-decoration: none;
+	}
+	* {
+	    box-sizing: border-box;
+	    position: relative;
+	}
+	.main {
+		margin: 100px auto 0;
+	    width: 300px;
+	    text-align: left;
+	}
+	.ui-btn {
+	    display: inline-block;
+	    text-align: center;
+	    width: auto;
+	    overflow: hidden;
+	    margin-top: 100px;
+	}
+	.ui-btn a {
+	    letter-spacing: 1px;
+	    text-rendering: optimizelegibility;
+	    text-transform: uppercase;
+	    border: 3px solid #000;
+	    color: #000;
+	    display: inline-block;
+	    font-weight: 500;
+	    text-decoration: none;
+	    min-width: 120px;
+	    font-size: 0.875em;
+	    padding: 12px 30px 10px;
+	    width: auto;
+	    z-index: 10;
+	}
+	.ui-btn .background {
+	    background-color: #000;
+	    bottom: 0;
+	    display: block;
+	    left: 0;
+	    opacity: 0;
+	    overflow: hidden;
+	    position: absolute;
+	    top: 0;
+	    transform: translate(-100%);
+	    transition: all 0.15s ease-in-out 0s;
+	    z-index: 15;
+	}
+	.ui-btn:hover .background {
+		opacity: 1;
+		-webkit-transform: translate(0);
+		-moz-transform: translate(0);
+		-ms-transform: translate(0);
+		-o-transform: translate(0);
+		transform: translate(0);
+	}
+	.ui-btn .background a {
+	    color: #fff;
+	    display: block;
+	    transform: translate(100%);
+	    white-space: nowrap;
+	    z-index: 20;
+	    transition: all 0.15s ease-in-out 0s;
+	}
+	.ui-btn:hover .background a {
+		-webkit-transform: translate(0);
+		-moz-transform: translate(0);
+		-ms-transform: translate(0);
+		-o-transform: translate(0);
+		transform: translate(0);
+	}
+	.btn-slow .background {
+		transition: all 1.2s ease-in-out 0s;
+	}
+	.btn-slow .background a {
+		transition: all 1.2s ease-in-out 0s;
+	}
+</style>
+</head>
+<body>
+<div class="main">
+	<div class="ui-btn">
+        <a target="_blank" href="http://www.oneplus.cn">深圳市万普拉斯贸易有限公司</a>
+        <div class="background ui-animate-150">
+            <a target="_blank" href="http://www.oneplus.cn">深圳市万普拉斯贸易有限公司</a>
+        </div>
+    </div>
+    <div class="ui-btn btn-slow">
+        <a target="_blank" href="http://www.oneplus.cn">Hover查看慢动作演示</a>
+        <div class="background ui-animate-150">
+            <a target="_blank" href="http://www.oneplus.cn">Hover查看慢动作演示</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
