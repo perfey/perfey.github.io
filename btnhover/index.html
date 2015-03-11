@@ -54,7 +54,15 @@
 	    overflow: hidden;
 	    position: absolute;
 	    top: 0;
+	    -webkit-transform: translate(-100%);
+		-moz-transform: translate(-100%);
+		-ms-transform: translate(-100%);
+		-o-transform: translate(-100%);
 	    transform: translate(-100%);
+	    -webkit-transition: all 0.15s ease-in-out 0s;
+	    -moz-transition: all 0.15s ease-in-out 0s;
+	    -ms-transition: all 0.15s ease-in-out 0s;
+	    -o-transition: all 0.15s ease-in-out 0s;
 	    transition: all 0.15s ease-in-out 0s;
 	    z-index: 15;
 	}
@@ -69,9 +77,17 @@
 	.ui-btn .background a {
 	    color: #fff;
 	    display: block;
-	    transform: translate(100%);
 	    white-space: nowrap;
 	    z-index: 20;
+	    -webkit-transform: translate(100%);
+		-moz-transform: translate(100%);
+		-ms-transform: translate(100%);
+		-o-transform: translate(100%);
+	    transform: translate(100%);
+	    -webkit-transition: all 0.15s ease-in-out 0s;
+	    -moz-transition: all 0.15s ease-in-out 0s;
+	    -ms-transition: all 0.15s ease-in-out 0s;
+	    -o-transition: all 0.15s ease-in-out 0s;
 	    transition: all 0.15s ease-in-out 0s;
 	}
 	.ui-btn:hover .background a {
@@ -82,9 +98,17 @@
 		transform: translate(0);
 	}
 	.btn-slow .background {
+	    -webkit-transition: all 0.15s ease-in-out 0s;
+	    -moz-transition: all 0.15s ease-in-out 0s;
+	    -ms-transition: all 0.15s ease-in-out 0s;
+	    -o-transition: all 0.15s ease-in-out 0s;
 		transition: all 1.2s ease-in-out 0s;
 	}
 	.btn-slow .background a {
+	    -webkit-transition: all 1.2s ease-in-out 0s;
+	    -moz-transition: all 1.2s ease-in-out 0s;
+	    -ms-transition: all 1.2s ease-in-out 0s;
+	    -o-transition: all 1.2s ease-in-out 0s;
 		transition: all 1.2s ease-in-out 0s;
 	}
 </style>
