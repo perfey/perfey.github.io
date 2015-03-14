@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>格子变换</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<style type="text/css">
+	body {
+		padding: 0;
+		margin: 0;
+	}
+	.box {
+		position: relative;
+	}
+	.g-list {
+		height: 10px;
+	}
+	.s-box {
+		display: inline-block;
+		float: left;
+		height: 8px;
+		width: 8px;
+		border: 1px solid #333333;
+	}
+	.box-1  {
+		margin-top: 40px;
+		margin-left: 20px;
+	}
+	.box-2 {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		-webkit-transform: translate3d(0px, 0px, 0px) rotate(180deg);
+		-moz-transform:  translate3d(0px, 0px, 0px) rotate(180deg);
+		-o-transform: translate3d(0px, 0px, 0px) rotate(180deg);
+		transform:  translate3d(0px, 0px, 0px) rotate(180deg);
+		-webkit-animation: move 6s ease-out 1s infinite alternate;
+		-moz-animation: move 6s ease-out 1s infinite alternate;
+		-o-animation: move 6s ease-out 1s infinite alternate;
+		animation: move 6s ease-out 1s infinite alternate;
+	}
+
+	
+	@-webkit-keyframes move
+	{
+		0% {-webkit-transform: translate3d(0px, 0px, 0px) rotate(180deg);}
+		10% {-webkit-transform: translate3d(0px, 0px, 0px) rotate(180deg);}
+		30% {-webkit-transform: translate3d(100px, 0px, 0px) rotate(180deg);}
+		50% {-webkit-transform: translate3d(100px, 20px, 0px) rotate(180deg);}
+		70% {-webkit-transform: translate3d(100px, 20px, 0px) rotate(180deg);}
+		90% {-webkit-transform: translate3d(30px, 20px, 0px) rotate(180deg);}
+		100% {-webkit-transform: translate3d(30px, 20px, 0px) rotate(180deg);}
+	}
+	@-moz-keyframes move
+	{
+		0% {-moz-transform: translate3d(0px, 0px, 0px) rotate(180deg);}
+		10% {-moz-transform: translate3d(0px, 0px, 0px) rotate(180deg);}
+		30% {-moz-transform: translate3d(100px, 0px, 0px) rotate(180deg);}
+		50% {-moz-transform: translate3d(100px, 20px, 0px) rotate(180deg);}
+		70% {-moz-transform: translate3d(100px, 20px, 0px) rotate(180deg);}
+		90% {-moz-transform: translate3d(30px, 20px, 0px) rotate(180deg);}
+		100% {-moz-transform: translate3d(30px, 20px, 0px) rotate(180deg);}
+	}
+	@-o-keyframes move
+	{
+		0% {-o-transform: translate3d(0px, 0px, 0px) rotate(180deg);}
+		10% {-o-transform: translate3d(0px, 0px, 0px) rotate(180deg);}
+		30% {-o-transform: translate3d(-100px, 0px, 0px) rotate(180deg);}
+		50% {-o-transform: translate3d(-100px, -20px, 0px) rotate(180deg);}
+		70% {-o-transform: translate3d(-100px, -20px, 0px) rotate(180deg);}
+		90% {-o-transform: translate3d(-30px, -20px, 0px) rotate(180deg);}
+		100% {-o-transform: translate3d(-30px, -20px, 0px) rotate(180deg);}
+	}
+	@keyframes move
+	{
+		0% {transform: translate3d(0px, 0px, 0px) rotate(180deg);}
+		10% {transform: translate3d(0px, 0px, 0px) rotate(180deg);}
+		30% {transform: translate3d(100px, 0px, 0px) rotate(180deg);}
+		50% {transform: translate3d(100px, 20px, 0px) rotate(180deg);}
+		70% {transform: translate3d(100px, 20px, 0px) rotate(180deg);}
+		90% {transform: translate3d(30px, 20px, 0px) rotate(180deg);}
+		100% {transform: translate3d(30px, 20px, 0px) rotate(180deg);}
+	}
+</style>
+</head>
+<body>
+	<div class="box-1 box">
+		<div class="g-list">
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+		</div>
+		<div class="g-list">
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+		</div>
+		<div class="g-list">
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+		</div>
+		<div class="g-list">
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+		</div>
+	</div>
+	<div class="box-2 box">
+		<div class="g-list">
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+		</div>
+		<div class="g-list">
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+		</div>
+		<div class="g-list">
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+		</div>
+		<div class="g-list">
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+			<span class="s-box"></span>
+		</div>
+	</div>
+</body>
+</html>
