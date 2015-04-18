@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>btn:hover</title>
+<meta name="keyword" content="按钮，hover，缓慢过渡，背景，字体颜色" />
+<meta name="description" content="hover后按钮的背景和颜色缓慢过渡，一种优雅的实现方式" />
+<style type="text/css">
+	body, h1, h2, h3, h4, h5 {
+	    color: #000;
+	    font-family: "Helvetica Neue",Arial,"Microsoft Yahei",Helvetica,sans-serif,Lato;
+	    font-weight: 500;
+	    letter-spacing: 0.02em;
+	    text-rendering: optimizelegibility;
+	}
+	a {
+	    text-decoration: none;
+	}
+	* {
+	    box-sizing: border-box;
+	    position: relative;
+	}
+	.main {
+		margin: 100px auto 0;
+	    width: 300px;
+	    text-align: left;
+	}
+
+	.btn {
+		display: inline-block;
+		height: 38px;
+		line-height: 38px;
+		width: 116px;
+		border: 1px solid #eb0028;
+		text-align: center;
+		letter-spacing: 2px;
+		padding-left: 2px;
+		cursor: pointer;
+		font-size: 14px;
+		-moz-transition: color 0.15s ease 0s;
+		-o-transition: color 0.15s ease 0s;
+		-webkit-transition: color 0.15s ease;
+		-webkit-transition-delay: 0s;
+		transition: color 0.15s ease 0s;
+		position: relative;
+		z-index: 1;
+	}
+	.btn:before {
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		width: 0px;
+		height: 40px;
+		content: "";
+		-moz-transition: width 0.15s ease 0s;
+		-o-transition: width 0.15s ease 0s;
+		-webkit-transition: width 0.15s ease;
+		-webkit-transition-delay: 0s;
+		transition: width 0.15s ease 0s;
+		z-index: -1;
+	}
+	.btn:hover:before {
+		width: 120px;
+	}
+	.red-border-btn {
+		color: #eb0028;
+		border: 1px solid #eb0028;
+	}
+	.red-border-btn:before {
+		background: #eb0028;
+	}
+	.red-border-btn:hover {
+		color: #ffffff;
+	}
+</style>
+</head>
+<body>
+<div class="main">
+	<span class="btn red-border-btn">一加手机</span>
+</div>
+</body>
+</html>
